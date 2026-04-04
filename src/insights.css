@@ -1,0 +1,78 @@
+.insights {
+  padding: 20px;
+  background: #f9fafb;
+}
+
+.insights h2 {
+  margin-bottom: 20px;
+}
+
+/* Grid */
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Card */
+.insight-card {
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: relative;
+  transition: 0.2s;
+}
+
+.insight-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Colors */
+.insight-card.blue { border-left: 5px solid #3b82f6; }
+.insight-card.green { border-left: 5px solid #22c55e; }
+.insight-card.red { border-left: 5px solid #ef4444; }
+.insight-card.purple { border-left: 5px solid #a855f7; }
+
+/* Text */
+.title {
+  color: gray;
+  font-size: 14px;
+}
+
+.insight-card h3 {
+  margin: 8px 0;
+}
+
+.desc {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* Icon */
+.icon {
+  margin-bottom: 10px;
+}
+
+/* Trend */
+.trend {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-weight: bold;
+}
+
+.trend.up {
+  color: #22c55e;
+}
+
+.trend.down {
+  color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .insight-grid {
+    grid-template-columns: 1fr;
+  }
+}

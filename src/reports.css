@@ -1,0 +1,106 @@
+.reports {
+  padding: 20px;
+  background: #f9fafb;
+}
+
+/* Header */
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.generate-btn {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+/* Summary */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* Filters */
+.filters {
+  margin-bottom: 15px;
+}
+
+/* Table */
+.reports-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.report-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.report-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Status */
+.status {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.status.ready {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status.pending {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+/* Actions */
+.actions button {
+  margin-left: 5px;
+  border: none;
+  background: #f3f4f6;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+}

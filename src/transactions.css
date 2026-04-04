@@ -1,0 +1,133 @@
+.container {
+  padding: 20px;
+  background: #f9fafb;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.add-btn {
+  background: black;
+  color: white;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.table-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  background: #f3f4f6;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+}
+
+tr:hover {
+  background: #f9fafb;
+}
+
+.income {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.expense {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.status.completed {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.status.pending {
+  background: #fef9c3;
+  color: #ca8a04;
+}
+
+.status.failed {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.actions button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.load-more {
+  text-align: center;
+  padding: 15px;
+}
+
+.load-more button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.empty {
+  text-align: center;
+  padding: 50px;
+}
+
+.empty button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  table {
+    display: none;
+  }
+
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

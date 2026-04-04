@@ -42,7 +42,36 @@ https://financeflow-dashboard.netlify.app
 - Uses conditional rendering for page switching  
 - Uses Chart.js for visualization  
 - Uses mock data for transactions  
+## 📊 Modules Overview
 
+### 💳 Transactions
+- Displays all financial transactions in a table  
+- Allows searching transactions by description  
+- Supports filtering by income and expense  
+- Helps users track and manage their daily financial activity  
+
+---
+
+### 📈 Analytics
+- Shows visual representation of financial data  
+- Line chart displays balance trend over time  
+- Doughnut chart shows category-wise spending  
+- Helps users understand spending patterns easily  
+
+---
+
+### 📑 Reports
+- Represents summarized financial data  
+- Designed to show overall financial insights in structured form  
+- Can be extended to support export (CSV/PDF)  
+
+---
+
+### 🧠 Insights
+- Displays key observations from financial data  
+- Shows highest spending category  
+- Shows total transactions and average spending  
+- Helps users make better financial decisions  
 ---
 
 ## ▶️ Run Locally

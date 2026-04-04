@@ -3,7 +3,6 @@
   background: #f9fafb;
 }
 
-/* Header */
 .reports-header {
   display: flex;
   justify-content: space-between;
@@ -17,7 +16,6 @@
   border-radius: 10px;
 }
 
-/* Summary */
 .summary {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -32,12 +30,10 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-/* Filters */
 .filters {
   margin-bottom: 15px;
 }
 
-/* Table */
 .reports-table {
   display: flex;
   flex-direction: column;
@@ -59,7 +55,6 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* Status */
 .status {
   padding: 5px 10px;
   border-radius: 8px;
@@ -76,7 +71,6 @@
   color: #ca8a04;
 }
 
-/* Actions */
 .actions button {
   margin-left: 5px;
   border: none;
@@ -86,7 +80,6 @@
   cursor: pointer;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0;

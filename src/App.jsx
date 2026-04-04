@@ -93,12 +93,10 @@ function App() {
     t.desc.toLowerCase().includes(search.toLowerCase())
   );
 
-  // filter by type
   if (typeFilter !== "all") {
     filteredData = filteredData.filter((t) => t.type === typeFilter);
   }
 
-  // sort
   if (sortType === "amount") {
     filteredData.sort((a, b) => b.amount - a.amount);
   }
@@ -110,7 +108,6 @@ const [activePage, setActivePage] = useState("dashboard");
   return (
     <div className="app-container">
 
-      {/* Sidebar */}
       <aside className={`aside ${sidebarOpen ? "active" : ""}`}>
         <div className="brand">
           <div className="logo">F</div>
@@ -186,13 +183,10 @@ const [activePage, setActivePage] = useState("dashboard");
         <div className="overlay" onClick={() => setSidebarOpen(false)} />
       )}
 
-      {/* Main Section */}
       <div className="main">
 
-        {/* Navbar */}
         <header className="navbar">
 
-          {/* LEFT */}
           <div className="nav-left">
             <div className="menu-btn" onClick={() => setSidebarOpen(!sidebarOpen)}>
               <Menu size={20} />
@@ -205,10 +199,8 @@ const [activePage, setActivePage] = useState("dashboard");
             <h2>Dashboard</h2>
           </div>
 
-          {/* RIGHT */}
           <div className="nav-right">
 
-            {/* Desktop only icons */}
             <div className="desktop-icons">
               <div className="icon-btn">
                 <Moon size={18} />
@@ -219,7 +211,6 @@ const [activePage, setActivePage] = useState("dashboard");
               </div>
             </div>
 
-            {/* User */}
             <div className="user-wrapper">
               <div className="user-box" onClick={() => setDropdownOpen(!dropdownOpen)}>
                 <User size={18} />
@@ -239,7 +230,6 @@ const [activePage, setActivePage] = useState("dashboard");
 
         </header>
 
-        {/* Content Area */}
         <main className="content">
 
           {activePage === "dashboard" && (
@@ -249,11 +239,8 @@ const [activePage, setActivePage] = useState("dashboard");
               <p>Monitor and understand your financial activity with smart insights</p>
             </div>
             
-
-            {/* Cards (placeholder) */}
             <div className="cards">
 
-              {/* Balance */}
               <div className="card balance" id='balance1'>
                 <div className="card-top">
                   <div className="icon blue"><Wallet size={18} /></div>
@@ -265,7 +252,6 @@ const [activePage, setActivePage] = useState("dashboard");
                 <p className="positive">+12.5% from last month</p>
               </div>
 
-              {/* Income */}
               <div className="card income">
                 <div className="card-top">
                   <div className="icon green"><TrendingUp size={18} /></div>
@@ -277,7 +263,6 @@ const [activePage, setActivePage] = useState("dashboard");
                 <p className="positive">+8.2% from last month</p>
               </div>
 
-              {/* Expense */}
               <div className="card expense">
                 <div className="card-top">
                   <div className="icon red"><TrendingDown size={18} /></div>
@@ -291,10 +276,8 @@ const [activePage, setActivePage] = useState("dashboard");
 
             </div>
 
-            {/* Charts placeholder */}
             <div className="charts">
 
-              {/* LEFT → Line Chart */}
               <div className="chart-box">
                 <h4>Balance Trend</h4>
 
@@ -309,7 +292,6 @@ const [activePage, setActivePage] = useState("dashboard");
                 />
               </div>
 
-              {/* RIGHT → Pie Chart */}
               <div className="chart-box">
                 <h4>Spending by Category</h4>
 
@@ -329,7 +311,6 @@ const [activePage, setActivePage] = useState("dashboard");
                   </div>
 
                   <div className="legend">
-                    {/* your legend code */}
                   </div>
 
                 </div>
@@ -340,7 +321,6 @@ const [activePage, setActivePage] = useState("dashboard");
             <div className="table">
               <h3>Recent Transactions</h3>
 
-              {/* Controls */}
               <div className="table-controls">
 
                 <input
@@ -362,7 +342,6 @@ const [activePage, setActivePage] = useState("dashboard");
 
               </div>
 
-              {/* Table */}
               <div className='table-wrapper'>
                 <table>
                 <thead>
@@ -398,12 +377,9 @@ const [activePage, setActivePage] = useState("dashboard");
               </div>
             </div>
 
-            {/* Insights */}
             Key Insights
             <div className="insights">
               
-
-              {/* Highest Spending */}
               <div className="insight-card">
                 <div className="insight-icon blue"><ShoppingCart size={18} /></div>
                 <p className="label">Highest Spending</p>
@@ -411,7 +387,6 @@ const [activePage, setActivePage] = useState("dashboard");
                 <span className="sub">₹1,350</span>
               </div>
 
-              {/* This Month */}
               <div className="insight-card">
                 <div className="insight-icon green"><Calendar size={18} /></div>
                 <p className="label">This Month</p>
@@ -419,7 +394,6 @@ const [activePage, setActivePage] = useState("dashboard");
                 <span className="sub">Total expenses</span>
               </div>
 
-              {/* Total Transactions */}
               <div className="insight-card">
                 <div className="insight-icon orange"><Activity size={18} /></div>
                 <p className="label">Total Transactions</p>
@@ -427,7 +401,6 @@ const [activePage, setActivePage] = useState("dashboard");
                 <span className="sub">All time</span>
               </div>
 
-              {/* Avg Transaction */}
               <div className="insight-card">
                 <div className="insight-icon red"><TrendingUp size={18} /></div>
                 <p className="label">Avg Transaction</p>

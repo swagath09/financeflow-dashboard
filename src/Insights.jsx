@@ -56,7 +56,6 @@ export default function Insights() {
 
             <p className="desc">{item.desc}</p>
 
-            {/* Trend Indicator */}
             {item.trend && (
               <span className={`trend ${item.trend}`}>
                 {item.trend === "up" ? "↑" : "↓"}

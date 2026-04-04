@@ -14,7 +14,6 @@ html, body, #root {
   font-family: 'Inter', sans-serif;
 }
 
-/* ===== APP LAYOUT ===== */
 .app-container {
   display: flex;
   height: 100vh;
@@ -24,8 +23,8 @@ html, body, #root {
 
 .content {
   padding: 15px 25px;
-  max-width: 1200px;   /* 🔥 important */
-  margin: 0 auto;      /* center */
+  max-width: 1200px;  
+  margin: 0 auto;     
   width: 100%;
 }
 
@@ -41,7 +40,6 @@ html, body, #root {
   }
 }
 
-/* ===== SIDEBAR ===== */
 .aside {
   width: 260px;
   min-width: 260px;
@@ -99,7 +97,6 @@ html, body, #root {
   color: #dc2626;
 }
 
-/* ===== BRAND ===== */
 .brand {
   display: flex;
   align-items: center;
@@ -124,7 +121,6 @@ html, body, #root {
   font-weight: 600;
 }
 
-/* ===== NAV MENU ===== */
 .nav-menu {
   display: flex;
   flex-direction: column;
@@ -153,7 +149,6 @@ html, body, #root {
   color: #4f46e5;
 }
 
-/* Active item (IMPORTANT) */
 .nav-menu .active {
   background: #e0e7ff;
   color: #4f46e5;
@@ -194,17 +189,14 @@ html, body, #root {
 
 @media (max-width: 768px) {
 
-  /* Hide extra icons */
   .desktop-icons {
     display: none;
   }
 
-  /* Show only name (Admin look) */
   .username {
     font-size: 14px;
   }
 
-  /* Reduce spacing */
   .navbar {
     padding: 0 15px;
   }
@@ -220,14 +212,12 @@ html, body, #root {
   z-index: 999;
 }
 
-/* ===== MAIN ===== */
 .main {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* ===== NAVBAR ===== */
 .navbar {
   height: 70px;
   background: transparent;
@@ -320,7 +310,6 @@ html, body, #root {
   color: black;
 }
 
-/* ===== CONTENT ===== */
 .content {
   padding: 15px 25px; 
   overflow-y: auto;
@@ -330,10 +319,11 @@ html, body, #root {
   text-align: left;
   margin: 10px 0 20px;
 }
+
 .welcome h3{
-  font-size: 22px;          /* proper size */
+  font-size: 22px;         
   font-weight: 600;
-  color: #0f172a;           /* soft black */
+  color: #0f172a;        
   letter-spacing: -0.3px;
 }
 
@@ -342,8 +332,6 @@ html, body, #root {
   font-size: 14px;
   color: #64748b; 
 }
-
-/* Card layout */
 
 .cards {
   display: grid;
@@ -372,14 +360,12 @@ html, body, #root {
   box-shadow: 1px 3px 10px lightgrey;
 }
 
-/* Top section */
 .card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Icons */
 .icon {
   width: 40px;
   height: 40px;
@@ -390,12 +376,10 @@ html, body, #root {
   font-size: 18px;
 }
 
-/* Colors */
 .icon.blue { background: #3b82f6; color: white; }
 .icon.green { background: #22c55e; color: white; }
 .icon.red { background: #ef4444; color: white; }
 
-/* Badge */
 .badge {
   font-size: 12px;
   padding: 4px 10px;
@@ -414,7 +398,6 @@ html, body, #root {
   color: #dc2626;
 }
 
-/* Text */
 .card h4 {
   margin-top: 15px;
   font-size: 14px;
@@ -427,7 +410,6 @@ html, body, #root {
   font-weight: 700;
 }
 
-/* Trends */
 .positive {
   margin-top: 8px;
   font-size: 13px;
@@ -482,15 +464,12 @@ html, body, #root {
   }
 }
 
-/* Donut */
 .pie-chart {
   width: 100%;
   max-width: 220px;
   height: 220px;
 }
 
-
-/* Legend */
 .legend {
   flex: 1;
   display: flex;
@@ -509,7 +488,6 @@ html, body, #root {
   margin-left: 10px;
 }
 
-/* Dots */
 .dot {
   width: 10px;
   height: 10px;
@@ -544,13 +522,11 @@ html, body, #root {
   overflow-x: auto;
 }
 
-/* Title */
 .table h3 {
   font-size: 18px;
   font-weight: 600;
 }
 
-/* Controls */
 .table-controls {
   display: flex;
   flex-wrap: wrap;
@@ -595,7 +571,6 @@ html, body, #root {
   background: #eef2ff;
 }
 
-/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -614,12 +589,10 @@ th, td {
   font-size: 15px;
 }
 
-/* Hover row */
 tbody tr:hover {
   background: #f8fafc;
 }
 
-/* Tags */
 .tag {
   padding: 4px 10px;
   border-radius: 12px;
@@ -636,7 +609,6 @@ tbody tr:hover {
   color: #dc2626;
 }
 
-/* Amount colors */
 .green {
   color: #16a34a;
   font-weight: 600;
@@ -667,7 +639,6 @@ tbody tr:hover {
   box-shadow: 1px 3px 10px lightgrey;
 }
 
-/* icon */
 .insight-icon {
   width: 42px;
   height: 42px;
@@ -678,13 +649,11 @@ tbody tr:hover {
   margin-bottom: 10px;
 }
 
-/* colors */
 .insight-icon.blue { background: #dbeafe; }
 .insight-icon.green { background: #dcfce7; }
 .insight-icon.orange { background: #ffedd5; }
 .insight-icon.red { background: #fee2e2; }
 
-/* text */
 .label {
   font-size: 13px;
   color: #64748b;
@@ -710,16 +679,13 @@ tbody tr:hover {
   color: #94a3b8;
 }
 
-/* ===== HIDE MOBILE NAV ITEMS BY DEFAULT (DESKTOP) ===== */
 .menu-btn,
 .brand-mobile {
   display: none;
 }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
 
-  /* Sidebar */
   .aside {
     position: fixed;
     top: 0;
@@ -733,13 +699,11 @@ tbody tr:hover {
     left: 0;
   }
 
-  /* Show menu + brand ONLY in mobile */
   .menu-btn,
   .brand-mobile {
     display: flex;
   }
 
-  /* Hide Dashboard text ONLY in mobile */
   .navbar h2 {
     display: none;
   }
@@ -749,7 +713,6 @@ tbody tr:hover {
     grid-template-columns: 1fr;
   }
 
-  /* 🔥 KEEP insights as 2 columns */
   .insights {
     grid-template-columns: repeat(2, 1fr);
   }

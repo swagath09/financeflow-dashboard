@@ -4,7 +4,7 @@ export default function Reports() {
   const [filter, setFilter] = useState("all");
   const [showPreview, setShowPreview] = useState(false);
   const [selectedReport, setSelectedReport] = useState(null);
-  const isAdmin = true; // toggle this
+  const isAdmin = true; 
 
   const reports = [
     { id: 1, name: "March Report", date: "2026-03-30", type: "Monthly", status: "Ready" },
@@ -27,13 +27,11 @@ export default function Reports() {
   return (
     <div className="reports">
 
-      {/* Header */}
       <div className="reports-header">
         <h2>Reports</h2>
         {isAdmin && <button className="generate-btn">+ Generate Report</button>}
       </div>
 
-      {/* Summary Cards */}
       <div className="summary">
         <div className="card">
           <p>Monthly Income</p>
@@ -51,7 +49,6 @@ export default function Reports() {
         </div>
       </div>
 
-      {/* Filters */}
       <div className="filters">
         <select onChange={(e) => setFilter(e.target.value)}>
           <option value="all">All</option>
@@ -60,7 +57,6 @@ export default function Reports() {
         </select>
       </div>
 
-      {/* Reports List */}
       <div className="reports-table">
         {filtered.map((r) => (
           <div className="report-row" key={r.id}>
@@ -86,7 +82,6 @@ export default function Reports() {
         ))}
       </div>
 
-      {/* Preview Modal */}
       {showPreview && (
         <div className="modal">
           <div className="modal-content">

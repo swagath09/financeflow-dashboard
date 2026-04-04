@@ -7,14 +7,12 @@
   margin-bottom: 20px;
 }
 
-/* Grid */
 .insight-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 
-/* Card */
 .insight-card {
   padding: 20px;
   border-radius: 16px;
@@ -28,13 +26,11 @@
   transform: translateY(-3px);
 }
 
-/* Colors */
 .insight-card.blue { border-left: 5px solid #3b82f6; }
 .insight-card.green { border-left: 5px solid #22c55e; }
 .insight-card.red { border-left: 5px solid #ef4444; }
 .insight-card.purple { border-left: 5px solid #a855f7; }
 
-/* Text */
 .title {
   color: gray;
   font-size: 14px;
@@ -49,12 +45,10 @@
   color: #6b7280;
 }
 
-/* Icon */
 .icon {
   margin-bottom: 10px;
 }
 
-/* Trend */
 .trend {
   position: absolute;
   top: 15px;
@@ -70,7 +64,6 @@
   color: #ef4444;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .insight-grid {
     grid-template-columns: 1fr;

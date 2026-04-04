@@ -31,7 +31,6 @@ import './analytics.css'
 
 export default function Analytics() {
 
-  // 🔹 Line Chart (Balance Trend)
   const lineData = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May"],
     datasets: [
@@ -46,7 +45,6 @@ export default function Analytics() {
     ]
   };
 
-  // 🔹 Bar Chart (Income vs Expense)
   const barData = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May"],
     datasets: [
@@ -63,7 +61,6 @@ export default function Analytics() {
     ]
   };
 
-  // 🔹 Doughnut Chart (Category)
   const doughnutData = {
     labels: ["Food", "Travel", "Bills", "Shopping"],
     datasets: [
@@ -83,7 +80,6 @@ export default function Analytics() {
   return (
     <div className="analytics">
 
-      {/* 🔹 Top Metrics */}
       <div className="metrics">
         <div className="card">
           <p>Total Income</p>
@@ -101,22 +97,18 @@ export default function Analytics() {
         </div>
       </div>
 
-      {/* 🔹 Charts */}
       <div className="charts">
 
-        {/* Line Chart */}
         <div className="chart-card large">
           <h4>Balance Trend</h4>
           <Line data={lineData} />
         </div>
 
-        {/* Bar Chart */}
         <div className="chart-card">
           <h4>Income vs Expense</h4>
           <Bar data={barData} />
         </div>
 
-        {/* Doughnut Chart */}
         <div className="chart-card">
           <h4>Spending Distribution</h4>
           <Doughnut data={doughnutData} />

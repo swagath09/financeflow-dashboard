@@ -90,7 +90,9 @@ function App() {
   ];
 
   let filteredData = transactions.filter((t) =>
-    t.desc.toLowerCase().includes(search.toLowerCase())
+    [t.desc, t.category, t.type].some((value) =>
+      value.toLowerCase().includes(search.toLowerCase())
+    )
   );
 
   if (typeFilter !== "all") {

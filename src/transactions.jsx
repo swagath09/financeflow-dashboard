@@ -35,11 +35,14 @@ export default function Transactions() {
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState("all");
 
+  const searchTerm = search.trim().toLowerCase();
+
   const filtered = transactionsData.filter((t) => {
-    return (
-      t.description.toLowerCase().includes(search.toLowerCase()) &&
-      (typeFilter === "all" || t.type === typeFilter)
+    const matchesSearch = [t.description, t.category, t.type].some((value) =>
+      value.toLowerCase().includes(searchTerm)
     );
+
+    return matchesSearch && (typeFilter === "all" || t.type === typeFilter);
   });
 
   return (
@@ -48,11 +51,11 @@ export default function Transactions() {
         <h2>Transactions</h2>
         <div className="controls">
           <input
-            placeholder="Search transactions..."
+            placeholder="Search by description, category, or type..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <select onChange={(e) => setTypeFilter(e.target.value)}>
+          <select value={typeFilter} onChange={(e) => setTypeFilter(e.target.value)}>
             <option value="all">All</option>
             <option value="income">Income</option>
             <option value="expense">Expense</option>
@@ -63,9 +66,11 @@ export default function Transactions() {
 
       {filtered.length === 0 ? (
         <div className="empty">
-          <p>No transactions yet</p>
-          <span>Start by adding your first transaction</span>
-          <button>Add Transaction</button>
+          <p>No transactions found</p>
+          <span>Try a different description, category, or transaction type</span>
+          <button onClick={() => { setSearch(""); setTypeFilter("all"); }}>
+            Clear Filters
+          </button>
         </div>
       ) : (
         <div className="table-container">
@@ -119,5 +124,3 @@ export default function Transactions() {
     </div>
   );
 }
-
-

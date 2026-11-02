@@ -38,7 +38,7 @@ export default function Transactions() {
   const searchTerm = search.trim().toLowerCase();
 
   const filtered = transactionsData.filter((t) => {
-    const matchesSearch = [t.description, t.category, t.type].some((value) =>
+    const matchesSearch = [t.description, t.category, t.type, t.status].some((value) =>
       value.toLowerCase().includes(searchTerm)
     );
 
@@ -51,7 +51,7 @@ export default function Transactions() {
         <h2>Transactions</h2>
         <div className="controls">
           <input
-            placeholder="Search by description, category, or type..."
+            placeholder="Search by description, category, type, or status..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
